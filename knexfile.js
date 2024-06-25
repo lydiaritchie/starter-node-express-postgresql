@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const { DATABASE_URL } = process.env;
 
-console.log(process.env);
+//console.log(process.env);
 console.log(DATABASE_URL);
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -12,7 +12,7 @@ console.log(DATABASE_URL);
 module.exports = {
 
   development: {
-    client: 'postgresql',
+    client: 'pg',
     connection: DATABASE_URL,
     migrations: {
       directory: path.join(__dirname, "src", "db", "migrations")
